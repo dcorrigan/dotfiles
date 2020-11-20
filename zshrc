@@ -32,5 +32,7 @@ export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 # ALIASES
+alias ga="git add"
+alias gd="git diff -w"
 alias gs="git status"
 alias gc="git commit"

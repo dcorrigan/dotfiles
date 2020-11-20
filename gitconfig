@@ -27,3 +27,6 @@
   excludesfile = ~/.gitignore
   autocrlf     = input
   editor       = vim
+[user]
+  name = Dan Corrigan
+  email = df.corrigan@gmail.com
