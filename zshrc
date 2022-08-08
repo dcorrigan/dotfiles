@@ -13,7 +13,7 @@ export ASDF_COMPLETIONS="$ASDF_DIR/etc/bash_completion.d"
 . $ASDF_DIR/asdf.sh
 . $ASDF_COMPLETIONS/asdf.bash
 
-# set up tmuxinator 
+# set up tmuxinator
 # https://github.com/tmuxinator/tmuxinator
 source ~/.bin/tmuxinator.zsh
 
@@ -30,9 +30,23 @@ export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$
 ## IMPORTANT EXPORTS
 # don't let homebrew upgrade other packages without asking
 export HOMEBREW_NO_AUTO_UPDATE=1
+# don't let python write *.pyc files
+export PYTHONDONTWRITEBYTECODE=1
 
 # ALIASES
 alias ga="git add"
 alias gd="git diff -w"
 alias gs="git status"
 alias gc="git commit"
+
+# Export NPM token
+export NODE_AUTH_TOKEN=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
+
+# Android Studio settings
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export ANDROID_SDK=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export HOMEBREW_GITHUB_API_TOKEN=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
