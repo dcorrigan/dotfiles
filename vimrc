@@ -17,7 +17,9 @@ nnoremap <leader><leader> <c-^>
 nnoremap <Leader>e :e <C-R>=expand('%:h') . '/'<CR>
 nnoremap <Leader>cb :let @+=@%<CR>
 
+" debuggers
 iabbrev ipdb import ipdb; ipdb.set_trace()<ESC>
+iabbrev pry require 'pry'; binding.pry<ESC>
 
 " file types
 au BufNewFile,BufRead *.gql set filetype=graphql

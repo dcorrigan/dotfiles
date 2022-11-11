@@ -8,10 +8,12 @@ colors
 
 # set up ASDF
 # https://asdf-vm.com/#/
-export ASDF_DIR=$(brew --prefix asdf)
-export ASDF_COMPLETIONS="$ASDF_DIR/etc/bash_completion.d"
+export ASDF_DIR=$HOME/.asdf
 . $ASDF_DIR/asdf.sh
-. $ASDF_COMPLETIONS/asdf.bash
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
 
 # set up tmuxinator
 # https://github.com/tmuxinator/tmuxinator
@@ -49,4 +51,11 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$HOME/.cargo/bin
 export HOMEBREW_GITHUB_API_TOKEN=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
+
+# update PATH for homebrew and rbenv
+export PATH=".bundle/bin:/usr/local/bin:/usr/local/sbin:$HOME/.rbenv/bin:$PATH"
+
+# rbenv
+eval "$(rbenv init - zsh)"

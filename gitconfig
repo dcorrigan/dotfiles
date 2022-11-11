@@ -29,4 +29,6 @@
   editor       = vim
 [user]
   name = Dan Corrigan
-  email = df.corrigan@gmail.com
+	email = daniel.corrigan@voxmedia.com
+[blame]
+	ignoreRevsFile = .git-blame-ignore-revs
