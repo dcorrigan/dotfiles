@@ -59,3 +59,8 @@ export PATH=".bundle/bin:/usr/local/bin:/usr/local/sbin:$HOME/.rbenv/bin:$PATH"
 
 # rbenv
 eval "$(rbenv init - zsh)"
+
+# pnpm
+export PNPM_HOME="/Users/daniel.corrigan/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
